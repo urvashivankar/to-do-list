@@ -1,4 +1,4 @@
-# 📝 Advanced To-Do App
+# 📝 To-Do list
 
 A modern and responsive To-Do application built using **HTML, CSS, and JavaScript**.  
 This project focuses on clean UI, smooth user experience, and real-world frontend logic.
