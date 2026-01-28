@@ -1,0 +1,160 @@
+body {
+  background: #0f172a;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  color: white;
+}
+
+.app {
+  background: #020617;
+  width: 420px;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.counter {
+  text-align: center;
+  margin-bottom: 14px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* INPUT ROW */
+.input-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+/* LEFT INPUT GROUP */
+.inputs {
+  display: flex;
+  gap: 6px;
+  flex: 1;
+}
+
+.inputs input,
+.inputs select {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  width: 100%;
+}
+
+/* ADD BUTTON (RIGHT ALIGNED) */
+.input-box button {
+  background: #38bdf8;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* FILTERS */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.filters button {
+  flex: 1;
+  margin: 3px;
+  background: #1e293b;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* TASK CARD */
+li {
+  background: #1e293b;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+li:hover {
+  transform: scale(1.02);
+  background: #273449;
+}
+
+li.completed {
+  opacity: 0.5;
+  text-decoration: line-through;
+  animation: completeTask 0.3s ease;
+}
+
+/* PRIORITY BADGES */
+.badge {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.High { background: #ef4444; animation: pulseRed 2s infinite; }
+.Medium { background: #f59e0b; }
+.Low { background: #22c55e; }
+
+/* ACTION ICONS */
+.actions button {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* GLOBAL POLISH */
+* {
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.4);
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes completeTask {
+  from { transform: scale(1); }
+  to { transform: scale(0.98); }
+}
+
+@keyframes pulseRed {
+  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.5); }
+  70% { box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}

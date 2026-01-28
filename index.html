@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced To-Do App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+    <h1>To-Do</h1>
+
+    <!-- Task Counter -->
+    <div id="counter" class="counter"></div>
+
+    <!-- Input Row -->
+    <div class="input-box">
+
+      <!-- Left Inputs -->
+      <div class="inputs">
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="What needs to be done?"
+        >
+
+        <input
+          type="date"
+          id="dueDate"
+        >
+
+        <select id="priority">
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+      </div>
+
+      <!-- Right Add Button -->
+      <button onclick="addTask()">Add</button>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters">
+      <button onclick="filterTasks('all')">All</button>
+      <button onclick="filterTasks('active')">Active</button>
+      <button onclick="filterTasks('completed')">Completed</button>
+    </div>
+
+    <!-- Task List -->
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
